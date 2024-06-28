@@ -16,9 +16,12 @@
     console.log('hello world')
     let now = new Date()
     // 获取当前月份 + 10， 当前日期，当前小时(十二进制) 
-    console.log(now.getMonth() + 5, now.getDate(), now.getHours())
-    let strPlus5 = `#*${now.getMonth() + 5}${now.getDate()}${now.getHours()}`
-    let strPlus10 = `#*${now.getMonth() + 10}${now.getDate()}${now.getHours()}`
+    console.log(now.getMonth(), now.getDate(), now.getHours())
+    let currentMonth = now.getMonth() + 1
+    let showDate = now.getDate()
+    let showHours = now.getHours() % 12
+    let strPlus5 = `#*${currentMonth + 5}${showDate}${showHours}`
+    let strPlus10 = `#*${currentMonth + 10}${showDate}${showHours}`
     // 设置页面上面的元素的内容
     document.querySelector('#d5').innerHTML = strPlus5
     document.querySelector('#d10').innerHTML = strPlus10
