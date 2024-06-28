@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>geely-debugger</title>
 </head>
 <body>
     <div>
@@ -19,7 +19,7 @@
     console.log(now.getMonth(), now.getDate(), now.getHours())
     let currentMonth = now.getMonth() + 1
     let showDate = now.getDate()
-    let showHours = now.getHours() % 12
+    let showHours = (now.getHours() % 12).toString().padStart(2, '0')
     let strPlus5 = `#*${currentMonth + 5}${showDate}${showHours}`
     let strPlus10 = `#*${currentMonth + 10}${showDate}${showHours}`
     // 设置页面上面的元素的内容
